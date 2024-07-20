@@ -1,0 +1,89 @@
+body{
+  background-color: rgb(255, 216, 248);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf);
+  }
+
+  h1{
+    font-family: "Montserrat", sans-serif;
+    color: rgb(168, 53, 163);
+    text-align: center;
+  }
+  h2{
+    font-family: "Montserrat", sans-serif;
+    color: rgb(168, 53, 163);
+    font-size: 20px;
+  }
+.todo{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgb(230, 200, 228);
+    padding: 30px;
+    border-radius: 40px;
+}
+
+.form{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__btn{
+    background-color: rgb(168, 53, 163);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    width: 210px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    align-self: end;
+}
+
+.form__task{
+    padding: 15px;
+    margin-right: 20px;
+    outline: none;
+    border: 2px solid rgb(168, 53, 163);
+    width: 50%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+}
+.form__task:focus{
+  border: 2px solid rgb(168, 53, 163);
+}
+
+/* Дополнительные классы */
+
+  .btn:disabled {
+    opacity: 0.5;
+}
+
+.noTasks{
+  font-family: "Montserrat", sans-serif;
+  list-style-type: none;
+  color: gray;
+  text-align: center;
+  width: 50%;
+}
+.completed {
+    text-decoration: line-through;
+    color: beige;
+  }
+
+  .item{
+    font-family: "Montserrat", sans-serif;
+    list-style-type: none;
+    margin-top: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+  }

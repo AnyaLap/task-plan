@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./assets/plan.css">
+	</head>
+	<body>
+		<main>
+			<h1>Планировщик задач</h1>
+            <div class="todo">
+				<h2>Добавить задачу</h2>
+                <div class="form">
+			        <input class="form__task" type="text" id="toDoInput" placeholder="Введите задачу" />
+			        <button class="form__btn" id="addButton">Добавить</button>
+                </div>
+				<h2>Список задач</h2>
+                <div id="toDoList">
+				</div>
+				<button class="form__btn btn" id="clearButton" disabled>Очистить список задач</button>
+            </div>
+		</main>
+        <script src="./assets/plan.js"></script>
+	</body>
+</html>
