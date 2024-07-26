@@ -105,27 +105,26 @@ let json = `[
 document.addEventListener('DOMContentLoaded',function(event){
     let superheroes = JSON.parse(json);
     let superContent = '';//Создаем карточку при условии 
-    for (let i = 0; i < superheroes.length; i++) {
-       let superhero = superheroes[i];
-
-       superContent += `<div class='superhero'>
-       <h2>${superhero.name}</h2>
-       <p>Вселенная: ${superhero.universe}</p>
-       <p>Альтер Эго: ${superhero.alterego}</p>
-       <p>Род деятельности: ${superhero.occupation}</p>
-       <p>Друзья: ${superhero.friends}</p>
-       <p>Супер-сила: ${superhero.superpowers}</p>
-       <p>Информация: ${superhero.info}</p>
-       <div class="r"><img class="img" src="${superhero.url}"/></div>
-       <div class="star_rating" data-hero="${i}">
-            <button class="star">&#9734;</button>
-            <button class="star">&#9734;</button>
-            <button class="star">&#9734;</button>
-            <button class="star">&#9734;</button>
-            <button class="star">&#9734;</button>
-        </div>
-       </div>`;
-    }
+    superheroes.forEach((superhero) => {
+      superContent += `<div class='superhero'>
+      <h2>${superhero.name}</h2>
+      <p>Вселенная: ${superhero.universe}</p>
+      <p>Альтер Эго: ${superhero.alterego}</p>
+      <p>Род деятельности: ${superhero.occupation}</p>
+      <p>Друзья: ${superhero.friends}</p>
+      <p>Супер-сила: ${superhero.superpowers}</p>
+      <p>Информация: ${superhero.info}</p>
+      <div class="r"><img class="img" src="${superhero.url}"/></div>
+      <div class="star_rating" data-hero="${superheroes.indexOf(superhero)}">
+           <button class="star">&#9734;</button>
+           <button class="star">&#9734;</button>
+           <button class="star">&#9734;</button>
+           <button class="star">&#9734;</button>
+           <button class="star">&#9734;</button>
+       </div>
+      </div>`;
+ 
+    });
     document.getElementById('superheroesContainer').innerHTML = superContent;//Выводим на страницу карточки в нужном формате
 
     const allRatings = document.querySelectorAll('.star_rating');

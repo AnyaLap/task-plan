@@ -67,7 +67,7 @@ loadTasks();
  //Обработчик события нажатия на кнопку Добавить
  addButton.addEventListener('click', () => {
    const taskText = toDoInput.value.trim();
-   if (taskText !== '') {
+   if (taskText !== '' & taskText.length > 0) {
      tasks.push({ text: taskText, completed: false });
      toDoInput.value = '';
      renderTasks();
